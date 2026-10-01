@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0f0f0f;
+    color: white;
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 220px;
+    background: #181818;
+    padding: 20px;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background: #2a2a2a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+}
+
+/* TABLE */
+.row {
+    background: #1c1c1c;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.2s;
+}
+
+.row:hover {
+    background: #2a2a2a;
+}
+
+/* BOUTONS */
+button {
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+button:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
+/* DECONNEXION */
+.deconnexion button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background: #2a2a2a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLETTES (max-width: 900px)
+========================================= */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 180px;
+    }
+
+    .main {
+        padding: 15px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE (max-width: 768px)
+========================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    /* SIDEBAR devient une barre horizontale */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .sidebar h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sidebar button {
+        width: auto;
+        flex: 1;
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    /* MAIN plus compact */
+    .main {
+        padding: 10px;
+    }
+
+    .main h1 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    /* STATS en colonne */
+    .stats {
+        flex-direction: column;
+    }
+
+    .card {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* LIGNES membres */
+    .row {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .row button {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .deconnexion {
+        padding: 0 10px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - TRES PETITS ECRANS (max-width: 420px)
+========================================= */
+
+@media (max-width: 420px) {
+
+    .sidebar button {
+        min-width: 45%;
+        font-size: 11px;
+    }
+
+    .main h1 {
+        font-size: 1.2rem;
+    }
+}

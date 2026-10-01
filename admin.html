@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard JR PROD</title>
+
+<link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>JR PROD</h2>
+    <button onclick="filter('all')">Tous</button>
+    <button onclick="filter('en_attente')">En attente</button>
+    <button onclick="filter('accepte')">Acceptés</button>
+    <button onclick="filter('refuse')">Refusés</button>
+
+    <button onclick="exportPDF()">📁 Export PDF</button>
+</div>
+
+
+<div class="main">
+
+    <h1>Dashboard Admin</h1>
+
+    <div class="stats">
+        <p>Total :</p>
+        <div class="card" id="total">0</div>
+        <p>En attente :</p>
+        <div class="card" id="attente">0</div>
+        <p>Acceptés :</p>
+        <div class="card" id="acceptes">0</div>
+    </div>
+
+    <div id="liste"></div>
+
+</div>
+
+<div class="deconnexion">
+    <button id="logoutBtn">Déconnexion</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="module" src="./js/admin.js"></script>
+
+
+
+</body>
+</html>

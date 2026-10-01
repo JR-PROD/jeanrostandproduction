@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #0f0f0f;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.login-box {
+    width: 90%;
+    max-width: 320px;
+    padding: 30px;
+
+    background: #1a1a1a;
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+input {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 8px;
+
+    color: white;
+    outline: none;
+}
+
+button {
+    width: 80%;
+    padding: 12px;
+
+    background: black;
+    color: white;
+
+    border: 1px solid #333;
+    border-radius: 8px;
+
+    cursor: pointer;
+    margin-top: 10px;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #222;
+}
+
+#error {
+    color: #ff4d4d;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   RESPONSIVE - PETITS ECRANS (max-width: 380px)
+========================================= */
+
+@media (max-width: 380px) {
+
+    .login-box {
+        padding: 22px 18px;
+    }
+
+    h1 {
+        font-size: 19px;
+    }
+
+    input, button {
+        width: 90%;
+    }
+}
